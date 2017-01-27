@@ -1,0 +1,17 @@
+---
+declared-services:
+  IndustrialNodeRed1-cloudantNoSQLDB:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: IndustrialNodeRed-cz
+  host: IndustrialNodeRed-cz
+  disk_quota: 1024M
+  services:
+  - IndustrialNodeRed1-cloudantNoSQLDB
+  env:
+    NODE_RED_STORAGE_NAME: IndustrialNodeRed1-cloudantNoSQLDB

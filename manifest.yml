@@ -1,0 +1,14 @@
+---
+declared-services:
+  IndustrialNodeRed-cloudantNoSQLDB:
+    label: cloudantNoSQLDB
+    plan: Lite
+applications:
+- name: IndustrialNodeRed-cz1
+  host: IndustrialNodeRed-cz1
+  memory: 512M
+  instances: 1
+  services:
+  - IndustrialNodeRed-cloudantNoSQLDB
+  env:
+    NODE_RED_STORAGE_NAME: IndustrialNodeRed-cloudantNoSQLDB 
