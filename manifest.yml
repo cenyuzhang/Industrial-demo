@@ -1,5 +1,8 @@
 ---
 declared-services:
+  IndustrialNodeRed-iotf-service:
+    label: iotf-service
+    plan: iotf-service-standard
   IndustrialNodeRed-cloudantNoSQLDB:
     label: cloudantNoSQLDB
     plan: Lite
@@ -10,5 +13,6 @@ applications:
   instances: 1
   services:
   - IndustrialNodeRed-cloudantNoSQLDB
+  - IndustrialNodeRed-iotf-service
   env:
     NODE_RED_STORAGE_NAME: IndustrialNodeRed-cloudantNoSQLDB 
