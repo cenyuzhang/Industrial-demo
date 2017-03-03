@@ -7,8 +7,8 @@ declared-services:
     label: cloudantNoSQLDB
     plan: Lite
 applications:
-- name: IndustrialNodeRed-cz1
-  host: IndustrialNodeRed-cz1
+- name: IndustrialNodeRed-cz2
+  host: IndustrialNodeRed-cz2
   memory: 512M
   instances: 1
   services:
